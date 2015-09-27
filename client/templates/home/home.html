@@ -1,0 +1,72 @@
+<template name="home">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-home-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Home</h4>
+			</div>		
+		</div>
+		
+		<div class="list list-inset">
+		  <div class="item">
+			<p id="pp-home-info">
+				Welcome SURYA C. AKSAM , Your last Citi Mobile login was on 23/9/2015 at 12:53:52 IST
+			</p>
+		  </div>
+		</div>
+
+      {{#ionList class="list-inset"}}
+          {{#ionItem iconRight=true avatar=true}}
+            <img src="/images/icon-tiny-acct-summary.png">
+            <h2>View Account Summary</h2>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}
+          
+          {{#ionItem iconRight=true avatar=true}}
+            <img src="/images/icon-tiny-funds-transfer.png">
+            <h2>Transfer Funds</h2>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}
+          
+          {{#ionItem path="inBranch" iconRight=true avatar=true}}
+            <img src="/images/icon-tiny-branch-services.png">
+            <h2>In-Branch Services</h2>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}          
+          
+          {{#ionItem iconRight=true avatar=true}}
+            <img src="/images/icon-tiny-pay-bills.png">
+            <h2>Pay your bills</h2>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}
+          
+          {{#ionItem iconRight=true avatar=true}}
+            <img src="/images/icon-tiny-recharge-mobile.png">
+            <h2>Recharge prepaid mobile</h2>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}    
+              
+          {{#ionItem iconRight=true avatar=true}}
+            <img src="/images/icon-tiny-imps.png">
+            <h2>Instant money transfer (IMPS)</h2>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}                      
+      {{/ionList}}
+		
+		
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

@@ -1,0 +1,142 @@
+$positive: #003e7c;
+/*$base-color: #ffffff;*/
+$loading-font-size: 22px;
+
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+.scroll-content {
+	font-family: HelveticaNeue,sans-serif !important;
+	background-color: #003e7c !important;
+	background-image: url(/images/screenbg_strip.png) !important;
+	background-repeat: repeat-x;	
+}
+
+.bar.bar-positive {
+	background-color: #003e7c;
+	background-image: url(/images/headerbg_strip_2.png) !important;
+	background-repeat: repeat-x;	
+	height: 50px;
+	
+	img {
+		display: block;
+		margin: auto;
+	}
+}
+
+.pp-home-icons-container {
+	padding-top: 20px;
+	
+	a:link, a:visited, a:hover, a:active { 
+		color: #ffffff;
+		text-decoration: none;
+	}
+}
+
+.pp-login-container, .pp-home-container, .pp-inbranch-container {
+	.list-inset {
+		border-radius: 10px;
+	}
+
+	h2 {
+		margin-top: 10px;
+		font-weight: bold;
+	}
+}
+
+.pp-login-text {
+	a:link, a:visited, a:hover, a:active { 
+		color: #ffffff;
+		text-decoration: none;
+	}	
+}
+
+.pp-login-form {
+	
+	label {
+		padding-left: 8px;
+	}	
+
+	.input-label {
+		color: #000000;
+		font-weight: bold;
+	}
+	
+	.button {
+		background-image: url(/images/imgbutton_bg.png?r201509270158);
+		background-repeat: repeat-x;		
+		color: #ffffff;
+		font-weight: bold;
+		width: 200px;
+		border-width: 0;
+		border-radius: 5px;
+	}
+}
+
+#pp-login-info, #pp-home-info {
+	overflow: visible;
+	white-space: normal;
+	color: #000000;
+}
+
+.pp-cash-form {
+	.button {
+		background-image: url(/images/imgbutton_bg.png?r201509270158);
+		background-repeat: repeat-x;		
+		color: #ffffff;
+		font-weight: bold;
+		width: 200px;
+		border-width: 0;
+		border-radius: 5px;
+	}
+	
+	.pp-cash-total {
+		span, input {
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+}
+
+.content {
+	.row {
+		color: #ffffff;
+		text-align: center;
+	}
+}
+
+.pp-cash-deposit-code {
+	h1 {
+		font-size: 50px;
+		font-weight: bold;
+		color: #ffffff;
+	}
+}
+
+.pp-cash-deposit-barcode {
+	img {
+		max-width: 100%;
+    	height: auto;
+	}
+}
+
+.ion-slide {
+  text-align: center;
+  padding-top: 200px;
+
+  &.dark-bg {
+    h3 {
+      color: #fff;
+    }
+  }
+}
+
+.popover {
+  height: auto;
+}
+
+.item-button-left, .item-button-right {
+  button {
+    top: 16px !important;
+  }
+}

@@ -1,0 +1,42 @@
+<template name="accountSelection">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Select an account</h4>
+			</div>		
+		</div>		
+		
+		
+      {{#ionList class="list-inset"}}
+          {{#ionItem path="cashDeposit" iconRight=true}}
+            <h2>52XX9XXX57</h2>
+            <h3>Savings Account</h3>
+            <span>Balance: ₹5764.00</span>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}
+          
+          {{#ionItem iconRight=true}}
+            <h2>52XX7XXX68</h2>
+            <h3>Current Account</h3>
+            <span>Balance: ₹1280.00</span>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}                    
+      {{/ionList}}		
+		
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

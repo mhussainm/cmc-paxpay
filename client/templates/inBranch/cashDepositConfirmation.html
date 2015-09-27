@@ -1,0 +1,50 @@
+<template name="cashDepositConfirmation">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Cash Deposit Confirmation</h4>
+			</div>		
+		</div>
+		
+		<div class="list list-inset">
+		  <div class="item">
+			<p id="pp-home-info">
+				Your cash deposit request for <strong>₹8500</strong> has been updated. Please show the generated unique code to the Bank Teller.
+			</p>
+		  </div>
+		</div>		
+		
+      {{#ionList class="list-inset"}}
+          {{#ionItem}}
+            <h2>52XX9XXX57</h2>
+            <h3>Savings Account</h3>
+            <span>Current Balance: ₹5764.00</span>
+          {{/ionItem}}                  
+      {{/ionList}}      	
+		
+		<div class="row pp-cash-deposit-code">
+			<div class="col">
+				<span>Your Unique Cash Deposit Request Code:</span>
+				<h1>1000087828732</h1>
+			</div>
+		</div>
+		
+		<div class="row pp-cash-deposit-barcode">
+			<div class="col">
+				<img src="/images/sample-barcode.png" />
+			</div>
+		</div>		
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

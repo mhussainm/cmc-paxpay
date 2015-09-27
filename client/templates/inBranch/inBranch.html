@@ -1,0 +1,47 @@
+<template name="inBranch">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>In-Branch Services</h4>
+			</div>		
+		</div>
+		
+		<div class="list list-inset">
+		  <label class="item item-input">
+			<i class="icon ion-ios-location placeholder-icon"></i>
+			<input type="text" placeholder="Branch Name">
+		  </label>
+		</div>		
+		
+		
+      {{#ionList class="list-inset"}}
+          {{#ionItem path="accountSelection" iconRight=true avatar=true}}
+            <img src="/images/icon-tiny-cash-rupees.png">
+            <h2>Deposit cash</h2>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}
+          
+          {{#ionItem iconRight=true avatar=true}}
+            <img src="/images/icon-tiny-demand-draft.png">
+            <h2>Order a demand draft</h2>
+            {{> ionIcon icon="ios-arrow-right"}}
+          {{/ionItem}}                     
+      {{/ionList}}		
+		
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

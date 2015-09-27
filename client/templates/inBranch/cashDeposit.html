@@ -1,0 +1,82 @@
+<template name="cashDeposit">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Cash deposit details</h4>
+			</div>		
+		</div>
+		
+		
+		
+		<form name="pp-cash-form" class="pp-cash-form">
+			<div class="list list-inset">
+			  <label class="item item-input">
+				<span class="input-label">
+					₹1000
+				</span>
+				<input type="number" placeholder="Enter number of ₹1000 notes">
+			  </label>
+			  <label class="item item-input">
+				<span class="input-label">
+					₹500
+				</span>
+				<input type="number" placeholder="Enter number of ₹500 notes">
+			  </label>		  
+			  <label class="item item-input">
+				<span class="input-label">
+					₹100
+				</span>
+				<input type="number" placeholder="Enter number of ₹100 notes">
+			  </label>			  
+			  <label class="item item-input">
+				<span class="input-label">
+					₹50
+				</span>
+				<input type="number" placeholder="Enter number of ₹50 notes">
+			  </label>
+			  <label class="item item-input">
+				<span class="input-label">
+					₹20
+				</span>
+				<input type="number" placeholder="Enter number of ₹20 notes">
+			  </label>
+			  <label class="item item-input">
+				<span class="input-label">
+					₹10
+				</span>
+				<input type="number" placeholder="Enter number of ₹10 notes">
+			  </label>
+			  <label class="item  item-input pp-cash-total">
+				<span class="input-label">
+					Total Cash Amount: 
+				</span>
+				<input type="text" value="₹8500" readonly>
+			  </label>			  			  			  
+			</div>
+			
+			<div class="row pp-cash-text">
+				<div class="col">
+					<button class="button pp-cash-button" data-action="confirmDeposit">
+					  Submit
+					</button>
+				</div>
+			</div>					
+		</form>		
+		
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

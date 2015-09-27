@@ -1,0 +1,67 @@
+<template name="login">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-login-container"> 	
+		<div class="row pp-login-text">
+			<div class="col">
+				<h4>Welcome to Citi Mobile</h4>
+			</div>		
+		</div>
+		
+		<form name="pp-login-form" class="pp-login-form">
+			<div class="list list-inset">
+			  <label class="item item-input">
+				<span class="input-label">
+					Enter User ID:
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+					&nbsp;
+				</span>
+				<input type="text" placeholder="User ID">
+			  </label>
+			  <label class="item item-input">
+				<span class="input-label">Enter Internet Password:<br/>IPIN</span>
+				<input type="password" placeholder="Password">
+			  </label>		  
+			</div>
+			
+			<div class="row pp-login-text">
+				<div class="col">
+					{{#linkTo route="home" class="pp-login-link"}}
+					<button class="button pp-login-button">
+					  Login
+					</button>
+					{{/linkTo}}
+				</div>
+			</div>					
+		</form>
+
+		<div class="list list-inset">
+		  <div class="item">
+			<p id="pp-login-info">
+				Important Information:
+				<br/><br/>
+				Please use your Internet banking User ID and Internet banking password (IPIN) to Login.
+				<br/><br/>
+				If you have forgotten your Internet banking User ID or password, please visit www.citibank.com/india from a PC/Laptop.
+				<br/><br/>
+				If you are a first time user, please create your Internet banking User ID and password by visiting www.citibank.com/india from a PC/Laptop.			  		
+			</p>
+		  </div>
+		</div>
+		
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabs}}
+    
+  {{/ionView}}
+</template>
