@@ -5,6 +5,10 @@ $loading-font-size: 22px;
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
 
+.addln-text {
+	color: #4D4D4D;
+}
+
 .scroll-content {
 	font-family: HelveticaNeue,sans-serif !important;
 	background-color: #003e7c !important;
@@ -12,7 +16,7 @@ $loading-font-size: 22px;
 	background-repeat: repeat-x;	
 }
 
-.bar.bar-positive {
+.bar-header.bar-positive {
 	background-color: #003e7c;
 	background-image: url(/images/headerbg_strip_2.png) !important;
 	background-repeat: repeat-x;	
@@ -107,7 +111,7 @@ $loading-font-size: 22px;
 
 .pp-cash-deposit-code {
 	h1 {
-		font-size: 50px;
+		font-size: 46px;
 		font-weight: bold;
 		color: #ffffff;
 	}

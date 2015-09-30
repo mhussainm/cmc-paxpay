@@ -12,7 +12,14 @@
 			</div>		
 		</div>
 		
-		
+      {{#ionList class="list-inset"}}
+          {{#ionItem path="accountSelection" iconLeft=true}}
+            {{> ionIcon icon="ios-arrow-left"}}          
+            <h2><strong class="addln-text">Deposit in Account </strong>52XX9XXX57</h2>
+            <h3>Savings Account</h3>
+            <span>Current Balance: ₹5764.00</span>            
+          {{/ionItem}}                          
+      {{/ionList}}		
 		
 		<form name="pp-cash-form" class="pp-cash-form">
 			<div class="list list-inset">
@@ -20,43 +27,43 @@
 				<span class="input-label">
 					₹1000
 				</span>
-				<input type="number" placeholder="Enter number of ₹1000 notes">
+				<input type="number" placeholder="Enter number of ₹1000 notes" data-rupval="1000">
 			  </label>
 			  <label class="item item-input">
 				<span class="input-label">
 					₹500
 				</span>
-				<input type="number" placeholder="Enter number of ₹500 notes">
+				<input type="number" placeholder="Enter number of ₹500 notes" data-rupval="500">
 			  </label>		  
 			  <label class="item item-input">
 				<span class="input-label">
 					₹100
 				</span>
-				<input type="number" placeholder="Enter number of ₹100 notes">
+				<input type="number" placeholder="Enter number of ₹100 notes" data-rupval="100">
 			  </label>			  
 			  <label class="item item-input">
 				<span class="input-label">
 					₹50
 				</span>
-				<input type="number" placeholder="Enter number of ₹50 notes">
+				<input type="number" placeholder="Enter number of ₹50 notes" data-rupval="50">
 			  </label>
 			  <label class="item item-input">
 				<span class="input-label">
 					₹20
 				</span>
-				<input type="number" placeholder="Enter number of ₹20 notes">
+				<input type="number" placeholder="Enter number of ₹20 notes" data-rupval="20">
 			  </label>
 			  <label class="item item-input">
 				<span class="input-label">
 					₹10
 				</span>
-				<input type="number" placeholder="Enter number of ₹10 notes">
+				<input type="number" placeholder="Enter number of ₹10 notes" data-rupval="10">
 			  </label>
 			  <label class="item  item-input pp-cash-total">
 				<span class="input-label">
-					Total Cash Amount: 
+					Total Cash Deposit Amount: 
 				</span>
-				<input type="text" value="₹8500" readonly>
+				<input type="text" value="₹0" readonly>
 			  </label>			  			  			  
 			</div>
 			
