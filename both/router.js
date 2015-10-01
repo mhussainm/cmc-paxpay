@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('accountSelection');
   this.route('cashDeposit');  
   this.route('cashDepositConfirmation');  
+  this.route('accountsList');    
   this.route('actionSheet');
   this.route('backdrop');
   this.route('forms', {
@@ -44,5 +45,36 @@ Router.map(function() {
   this.route('tabs.two', {path: '/tabs/two', layoutTemplate: 'tabsLayout'});
   this.route('tabs.three', {path: '/tabs/three', layoutTemplate: 'tabsLayout'});
   this.route('tabs.four', {path: '/tabs/four', layoutTemplate: 'tabsLayout'});
-  this.route('userAccounts');
+  this.route('userAccounts');  
 });
+
+// Creating Server-side webhook (APIs) for external triggers
+if(Meteor.isServer) {
+
+	Router.route("/trigger", { where: "server" })
+		.get(function () {
+				console.log("HUSSAIN - In Route /trigger: GET");
+				//console.log(this.params);
+				if (this.params) {
+					//console.log(this.params.query);
+					if (this.params.query) {
+						//console.log(this.params.query.action);
+						if(this.params.query.action === "confirmDeposit") {
+							console.log("In Trigger Action EQ confirmDeposit");
+							Triggers.upsert(
+								{ trigger: "showDepositAcceptedPopup" },
+								{ 
+									trigger: "showDepositAcceptedPopup", 
+									state: true 
+								}
+							);							
+						}
+						else {
+							console.log("Undefined ACTION");
+						}
+					}
+				}
+				this.response.writeHead(200, {'Content-Type': 'application/json'});
+				this.response.end('{"success" : true}');
+		});
+}

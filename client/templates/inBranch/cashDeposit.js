@@ -12,6 +12,7 @@ Template.cashDeposit.rendered = function() {
 		//console.info('Total Amount ₹' + totalDepAmt);
 		$('.pp-cash-form').find('.pp-cash-total input').val('₹' + totalDepAmt);
 		Session.set('totalCashDepositAmount', totalDepAmt);
+		Session.set('newAccountBalance', (5764 + totalDepAmt));
 	});
 };
 
@@ -28,6 +29,8 @@ Template.cashDeposit.events({
       cancelText: 'No',
       onOk: function() {
         // Submit and route to confirmation page
+        Meteor.call('resetDepositAcceptedPopupVar');
+        
         Router.go('/cashDepositConfirmation');
       },
       onCancel: function() {

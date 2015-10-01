@@ -23,3 +23,7 @@ Posts.attachSchema(new SimpleSchema({
     }
   }
 }));
+
+
+// Collection for Triggers
+Triggers = new Mongo.Collection('triggers');
